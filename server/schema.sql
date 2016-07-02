@@ -1,13 +1,22 @@
-CREATE DATABASE chat;
+-- CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE messages (
   /* Describe your table here.*/
+  id integer,
+  username text,
+  message text,
+  roomname text
 );
 
-/* Create other tables and define schemas for them here! */
+CREATE table users (
+  id integer,
+  username text
+);
 
+
+/* Create other tables and define schemas for them here! */
 
 
 
