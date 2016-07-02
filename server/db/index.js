@@ -20,4 +20,11 @@ connection.connect(function(err) {
   }
 });
 
-module.exports = connection;
+connection.query('SELECT * FROM messages', function(err, rows, fields) {
+  if (err) {
+    throw err;
+  }
+  console.log('rows is', rows);
+  // console.log('field is', fields);
+});
+module.exports.connection = connection;

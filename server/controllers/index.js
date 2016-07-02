@@ -9,9 +9,9 @@ module.exports = {
       
     }, // a function which handles a get request for all messages
     post: function (req, res) {
-      models.messages.post(req.body);
+      console.log('REQUEST BODY', req.body.username);
+      models.messages.post(req.body.username, req.body.text, req.body.roomname);
       res.end();
-      // console.log('request is', req);
       // console.log('response is', res);
       // var connection = mysql.createConnection(
       //   {

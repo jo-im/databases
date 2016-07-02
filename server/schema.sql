@@ -1,3 +1,4 @@
+
 -- CREATE DATABASE chat;
 
 USE chat;
@@ -5,14 +6,14 @@ USE chat;
 CREATE TABLE messages (
   /* Describe your table here.*/
   id integer,
-  username text,
-  message text,
-  roomname text
+  username VARCHAR(255),
+  message VARCHAR(255),
+  roomname VARCHAR(255)
 );
 
 CREATE table users (
   id integer,
-  username text
+  username VARCHAR(255)
 );
 
 
