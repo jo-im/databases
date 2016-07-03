@@ -1,21 +1,27 @@
 
--- CREATE DATABASE chat;
+CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE messages (
-  /* Describe your table here.*/
-  id integer,
-  username VARCHAR(255),
+  id integer NOT NULL AUTO_INCREMENT,
+  username integer NOT NULL,
   message VARCHAR(255),
-  roomname VARCHAR(255)
+  roomname VARCHAR(255),
+  PRIMARY KEY (id)
 );
 
-CREATE table users (
-  id integer,
-  username VARCHAR(255)
-);
+  -- FOREIGN KEY (username) REFERENCES users (id),
+  -- FOREIGN KEY (roomname) REFERENCES rooms (id)
+-- SELECT rooms.name FROM rooms 
+-- messages.username's foreign key is users.id
+-- messages.roomname's foreign key is rooms.id
 
+CREATE TABLE users (
+  id integer NOT NULL AUTO_INCREMENT,
+  username VARCHAR(255),
+  PRIMARY KEY (id)
+);
 
 /* Create other tables and define schemas for them here! */
 

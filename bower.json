@@ -1,0 +1,22 @@
+{
+  "name": "databases",
+  "description": "Learn about databases",
+  "main": "",
+  "authors": [
+    "Hack Reactor <curriculum.team@hackreactor.com>"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/jo-im/2016-06-databases",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "underscore": "^1.8.3",
+    "backbone": "^1.3.3"
+  }
+}

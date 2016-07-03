@@ -29,7 +29,7 @@ var app = {
     app.fetch(false);
 
     // Poll for new messages
-    setInterval(app.fetch, 3000);
+    // setInterval(app.fetch, 10000);
   },
 
   send: function(data) {
@@ -60,6 +60,7 @@ var app = {
       contentType: 'application/json',
       data: { order: '-createdAt'},
       success: function(data) {
+        console.log('DATA ----------- ' + data);
         // Don't bother if we have nothing to work with
         if (!data.results || !data.results.length) { return; }
 
